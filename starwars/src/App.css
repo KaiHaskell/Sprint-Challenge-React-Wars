@@ -2,7 +2,14 @@
   text-align: center;
 }
 .Header {
-  color: #443e3e;
+  color: #ffe81f;
   text-shadow: 1px 1px 5px #fff;
+  font-family: "Star Jedi", arial;
 }
 /* write your parent styles in here for your App.js */
+.character-containersw {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
