@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import SwCard from "./components/Card";
-import { Container, Row } from "reactstrap";
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -27,22 +26,28 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">React Wars</h1>
-      <Container>
-        <Row>
-          {people.map((character, index) => {
-            return (
-              <SwCard
-                key={index}
-                name={character.name}
-                birth_year={character.birth_year}
-                films={character.films}
-                url={character.url}
-              />
-            );
-          })}
-        </Row>
-      </Container>
+      <h1 className="Header">
+        <a href="https://fontmeme.com/star-wars-font/">
+          <img
+            src="https://fontmeme.com/permalink/191108/e719ef4e71466e5a1d74d2f83ac4cc2b.png"
+            alt="star-wars-font"
+            border="0"
+          />
+        </a>
+      </h1>
+      <div className="character-containersw">
+        {people.map((character, index) => {
+          return (
+            <SwCard
+              key={index}
+              name={character.name}
+              birth_year={character.birth_year}
+              films={character.films}
+              url={character.url}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
